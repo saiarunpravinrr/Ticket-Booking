@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Ticket Show</title>
+  </head>
+  <body>
+ 
+    <!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <a class="mdl-layout-title" href="/adminDashboard">Ticket Show</a>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+ 
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Hi,User</span>
+    <nav class="mdl-navigation">
+      
+     
+      <a class="mdl-navigation__link" href="/" role="button">Home</a>
+     
+    </nav>
+  </div>
+  <div align=center> 
+   <div class="card1" style="width: 24rem;" align=center>
+   
+     <form action="/addvenue" method="POST">
+<div class="form-group">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Venue Name">
+    
+  </div>
+    <div class="form-group">
+    <label for="exampleInputEmail1">Capacity</label>
+    <input type="number" class="form-control" name="capacity" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Capacity">
+  </div>  
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">ID</label>
+    <input type="text" class="form-control" name="id" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter ID">
+    
+  </div>
+  
+  <button type="submit" class="btn btn-primary" input type="submit" onclick="myFunction()">Submit</button>
+
+<script>
+function myFunction() {
+    alert("Venue Added Successfully");
+}
+</script>

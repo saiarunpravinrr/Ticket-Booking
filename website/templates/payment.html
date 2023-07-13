@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <title>Movie Ticket Booking</title>
+  </head>
+  <body>
+ 
+    <!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Movie Ticket Booking</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        
+        
+        <a class="mdl-navigation__link" href="showAboutUs" role="button">About Us</a>
+        
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Hi,User</span>
+    <nav class="mdl-navigation">
+      
+     
+      <a class="mdl-navigation__link" href="showAboutUs" role="button">About Us</a>
+     
+    </nav>
+  </div>
+  <div align=center> 
+  <form action="/book" method="POST">
+   <div class="card" style="width: 32rem;" align=center>
+    <img class="card-img-top" src="\static\images\bg.jpg" alt="Card image cap">
+     <div class="card-body">
+      <h1 class="card-title">TICKET IS READY</h1>
+      <h4>CUSOMER NAME - {{user}}</H4>
+      <h4>MOVIE- {{movie}}</H4>
+      <h4>VENUE - {{venue}}</H4>
+      <h4>SHOW TIME - {{show_no}}</H4>
+      <h4>NUMBER OF TICKETS - {{tickets}}</H4>
+      <h4>Transaction ID - {{tid}}</H4>
+      <h3>TOTAL COST = ₹{{cost}}</h3>
+      <a href="showmovies" class="btn btn-warning" role="button" onclick="Cancel()"  >Cancel</a> 
+      <button type="submit" class="btn btn-outline-success" input type="submit" onclick="myFunction()" >Submit</button>
+
+<script>
+function myFunction() {
+    alert("BOOKED SUCCEFULLY \n KEEP WATCHING :)");
+}
+</script>
+<script>
+function Cancel() {
+    alert("BOOKING CANCELLED \n COME BACK AGAIN :)");
+}
+</script>
+    </form>
+  </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+<!-- Your content goes here --></div>
+  </main>
+</div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
