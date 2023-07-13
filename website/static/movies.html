@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+     
+    <title>Ticket Show</title>
+  </head>
+  <body>
+ 
+    <!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Ticket Show</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        
+        
+        <a class="mdl-navigation__link" href="/" role="button">Log Out</a>
+        
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Hi,{{USER}}</span>
+    <nav class="mdl-navigation">
+
+      <a class="mdl-navigation__link" href="/" role="button">Your Orders</a>
+     
+    </nav>
+  </div>
+  
+    <div align=center>
+  <Table border = 2>
+  {% for row in rows %}
+  <tr>
+    <td>  
+        <!-- Wide card with share menu button -->
+        <style>
+          .demo-card-wide.mdl-card {
+            width: 300px;
+            height: 380px;
+          }
+          
+          .demo-card-wide > .mdl-card__title {
+            background: url('../static/images/purple.png') center / cover;
+            color: #fff;
+            height: 250px;
+          }
+          
+          .demo-card-wide > .mdl-card__supporting-text {
+            color: #424242;
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 10px;
+          }
+          
+          .demo-card-wide > .mdl-card__actions {
+            display: flex;
+            justify-content: center;
+            margin-top: 16px;
+          }
+          
+          .demo-card-wide > .mdl-card__actions .mdl-button {
+            background-color: #3f51b5;
+            color: #fff;
+            font-size: 14px;
+            padding: 3px 20px;
+          }
+          
+          .demo-card-wide > .mdl-card__menu {
+            color: #fff;
+          }
+          
+          /* Create a grid with 2 columns and 3 rows */
+          .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 15px;
+          }
+          
+          /* Place the first three cards in the first row of the grid */
+          .cards-grid .card:nth-child(-n+3) {
+            grid-row: 1;
+            grid-column: span 1;
+          }
+          
+          /* Place the next three cards in the second row of the grid */
+          .cards-grid .card:nth-child(n+4):nth-child(-n+6) {
+            grid-row: 2;
+            grid-column: span 1;
+          }
+
+          .cards-grid .card:nth-child(n+7):nth-child(-n+9) {
+            grid-row: 3;
+            grid-column: span 1;
+          }
+          
+        </style>
+
+<!--<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">{{row[0]}}</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    
+    {{row[2]}}
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="showBookTickets">
+      BOOK
+    </a>
+  </div>
+  <div class="mdl-card__menu">
+    <span class="mdl-badge" data-badge="{{row[1]}}">Rating</span>
+  </div>
+</div>
+    </td>
+  </tr>
+  {% endfor %}
+    </table>
+  </div>
+</div>Your content goes here</div>
+  </main>
+</div>-->
+
+<div class="cards-grid">
+  {% for row in rows %}
+  <div class="card">
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">{{row[0]}}</h2>
+      </div>
+      <div class="mdl-card__supporting-text">
+        {{row[2]}}
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="showBookTickets">
+          BOOK
+        </a>
+      </div>
+      <div class="mdl-card__menu">
+        <span class="mdl-badge" data-badge="{{row[1]}}">Rating</span>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</table>
+</div>
+</div><!--Your content goes here--></div>
+</main>
+</div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
