@@ -1,0 +1,40 @@
+.mdl-layout__header-row.mdl-layout-title{
+    color:white;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: "Garamond","Lucida Console", "Courier New", monospace;
+    text-decoration: none;
+}
+.mdl-layout__header{
+    background-color:grey;
+    text-decoration:none;
+    }
+    a{
+      color:white;
+}
+.mdl-layout__header{
+    background-color:gray;
+}
+.login{
+    text-align: left;
+    padding-top: 50px;
+    font-size: x-large;
+}
+.form-group{
+    padding-top: 15px;
+}
+.signup{
+    padding-top: 100px;
+    text-align:left;
+    font-size: x-large;
+}
+.demo-card-wide.mdl-card {
+    height: 380px;
+    width: 50%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+
+
