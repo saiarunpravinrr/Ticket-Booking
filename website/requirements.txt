@@ -1,0 +1,5 @@
+Flask==2.2.2
+sqlite3==0.0.9
+SQLAlchemy==1.4.45
+Jinja2==3.0.3
+Flask-SQLAlchemy==3.0.0

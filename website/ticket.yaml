@@ -1,0 +1,62 @@
+name: Ticket Show App
+version: 1.0.0
+dependencies:
+  - python=3.9
+  - flask
+  - sqlite3
+# Flask App Configuration
+debug: False
+secret_key: 'mysecretkey'
+host: 127.0.0.1
+port: 5000
+
+# Database Configuration
+database:
+  uri: 'sqlite:///movie_database.db'
+
+# Flask Routes
+routes:
+  - url: /
+    endpoint: main
+    methods: [GET]
+
+  - url: /showAboutUs
+    endpoint: showAboutUs
+    methods: [GET]
+
+  - url: /showNewUserPage/
+    endpoint: showNewUserPage
+    methods: [GET]
+
+  - url: /showloginpage/showNewUserPage/
+    endpoint: cshowNewUserPage1
+    methods: [GET]
+
+  - url: /signUp
+    endpoint: signup
+    methods: [POST, GET]
+
+  - url: /showloginpage/
+    endpoint: cshowloginpage
+    methods: [GET]
+
+  - url: /login
+    endpoint: login
+    methods: [POST, GET]
+
+  - url: /adminDashboard/showmovies/
+  - url: /showmovies/
+    endpoint: showmovies
+    methods: [GET]
+
+  - url: /showmovies/showBookTickets/
+    endpoint: showBookTickets
+    methods: [GET]
+
+  - url: /checkAvail
+    endpoint: availability
+    methods: [POST, GET]
+
+  - url: /payment/
+    endpoint: pay
+    methods: [GET]
